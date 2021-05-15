@@ -1,0 +1,33 @@
+%prevent-overflow {
+  margin-top: 0;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+// Font Weights
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+p,
+li {
+  @extend %prevent-overflow;
+}
+
+// Heading Typography
+$type-base-size: 1rem;
+$type-ratio: 1.333;
+// Loop Variables
+$type-levels: 4, 3, 2, 1;
+$cur-level-size: $type-base-size;
+
+@each $level in $type-levels {
+  $cur-level-size: $cur-level-size * $type-ratio;
+  h#{$level} {
+    @extend %prevent-overflow;
+    font-size: $cur-level-size;
+    line-height: calc(2px + 2ex + 2px);
+    margin-bottom: 0.65em;
+  }
+}
