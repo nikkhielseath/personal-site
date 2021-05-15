@@ -2,13 +2,15 @@ import * as React from "react";
 import "../styles/style.scss";
 
 const HomePage = () => {
-  const dummyText = "It is okay to be scared";
+  const headingText = "It is okay to be scared";
+  const bodyText = "You need to still keep moving forward";
   return (
     <React.Fragment>
-      <h1>{dummyText}</h1>
-      <h2>{dummyText}</h2>
-      <h3>{dummyText}</h3>
-      <h4>{dummyText}</h4>
+      <h1>{headingText}</h1>
+      <h2>{headingText}</h2>
+      <h3>{headingText}</h3>
+      <h4>{headingText}</h4>
+      <p>{bodyText}</p>
     </React.Fragment>
   );
 };

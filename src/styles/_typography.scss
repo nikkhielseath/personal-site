@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Satisfy&family=Yanone+Kaffeesatz:wght@700&display=swap");
 %prevent-overflow {
   margin-top: 0;
   word-break: break-word;
@@ -9,6 +10,11 @@ $light: 300;
 $normal: 400;
 $semibold: 500;
 $bold: 700;
+
+// Font Families
+$heading: "Yanone Kaffeesatz", sans-serif;
+$body: "Lato", sans-serif;
+$cursive: "Satisfy", cursive;
 
 p,
 li {
@@ -26,6 +32,7 @@ $cur-level-size: $type-base-size;
   $cur-level-size: $cur-level-size * $type-ratio;
   h#{$level} {
     @extend %prevent-overflow;
+    font-family: $heading;
     font-size: $cur-level-size;
     line-height: calc(2px + 2ex + 2px);
     margin-bottom: 0.65em;
