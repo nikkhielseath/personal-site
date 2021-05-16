@@ -1,0 +1,98 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/typography";
+
+.home {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: "hero" "footer";
+  min-height: 100vh;
+
+  &__hero {
+    background-image: url("../../assets/blob combination.svg");
+    background-size: 70% 100vh;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    grid-area: hero;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "hero";
+    height: 90vh;
+    > * {
+      grid-area: hero;
+    }
+  }
+  &__footer {
+    grid-area: footer;
+    display: grid;
+    place-content: center;
+    height: 10vh;
+  }
+}
+
+.hero {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+
+  &__greet {
+    margin-bottom: 0;
+  }
+
+  &__adjectives {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: min(40px, 2.5em);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__cta {
+    background: linear-gradient(
+      $primaryGradientAngle,
+      $primary 0%,
+      $secondary 100%
+    );
+    box-shadow: 10px 10px 0 $btnShadow;
+    font-weight: $bold;
+    &:hover {
+      background: linear-gradient(
+        $primaryGradientAngle,
+        scale-color($primary, $lightness: -10%) 0%,
+        scale-color($secondary, $lightness: -10%) 100%
+      );
+      box-shadow: 10px 10px 0 scale-color($btnShadow, $lightness: -20%);
+    }
+  }
+}
+
+.footer {
+  &__signature {
+    font-family: $cursive;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.25em;
+    a {
+      color: $primary;
+      transition: transform 180ms ease-in-out;
+      &:visited {
+        color: $primary;
+      }
+      &:hover {
+        color: scale-color($secondary, $lightness: -20%);
+        transform: scale(1.1) translateY(-25%);
+      }
+    }
+  }
+}
