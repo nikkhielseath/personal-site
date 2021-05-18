@@ -1,5 +1,6 @@
 @import "variables/typography";
 @import "variables/colors";
+@import "variables/breakpoints";
 
 %prevent-overflow {
   margin-top: 0;
@@ -16,10 +17,12 @@
 // Loop Variables
 $type-levels: 6, 5, 4, 3, 2, 1;
 $cur-level-size: $type-base-size;
+$md-cur-level-size: $type-base-size;
 $lg-cur-level-size: $type-base-size;
 
 @each $level in $type-levels {
   $cur-level-size: $cur-level-size * $type-ratio;
+  $md-cur-level-size: $md-cur-level-size * $md-type-ratio;
   $lg-cur-level-size: $lg-cur-level-size * $lg-type-ratio;
   h#{$level} {
     @extend %prevent-overflow;
@@ -27,7 +30,10 @@ $lg-cur-level-size: $type-base-size;
     font-size: $cur-level-size;
     line-height: calc(2px + 2ex + 2px);
     margin-bottom: 0.25em;
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: $tabletScreen) {
+      font-size: $md-cur-level-size;
+    }
+    @media only screen and (min-width: $desktopScreen) {
       font-size: $lg-cur-level-size;
     }
   }
@@ -43,7 +49,7 @@ body > * {
   font-size: 1rem;
   font-weight: $normal;
   line-height: 1.5;
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: $desktopScreen) {
     font-size: 1.5rem;
   }
 }

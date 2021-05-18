@@ -1,22 +1,33 @@
 @import "src/styles/variables/colors";
 @import "src/styles/variables/typography";
+@import "src/styles/variables/breakpoints";
 
 .home {
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-areas: "hero" "footer";
-  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "hero" "." "footer";
+  min-height: 90vh;
+  @media only screen and (min-width: $desktopScreen) {
+    min-height: 100vh;
+  }
 
   &__hero {
-    background-image: url("../../assets/blob combination.svg");
-    background-size: 70% 100vh;
+    background-image: url("../../assets/blueBlob_mobile.svg");
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: -90vw -10vh;
     grid-area: hero;
     display: grid;
     align-items: center;
     grid-template-areas: "hero";
-    height: 90vh;
+    min-height: 70vh;
+    max-height: 80vh;
+    @media only screen and (min-width: $tabletScreen) {
+      min-height: 90vh;
+      max-height: 90vh;
+      background-image: url("../../assets/blob combination.svg");
+      background-size: 70% 100vh;
+      background-position: right bottom;
+    }
     > * {
       grid-area: hero;
     }
@@ -25,7 +36,9 @@
     grid-area: footer;
     display: grid;
     place-content: center;
-    height: 10vh;
+    @media only screen and (min-width: $desktopScreen) {
+      height: 10vh;
+    }
   }
 }
 
@@ -95,7 +108,8 @@
   &__social-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1em;
     margin-bottom: 0.25em;
     a {
       color: $primary;
