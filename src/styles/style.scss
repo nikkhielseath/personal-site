@@ -16,24 +16,36 @@
 // Loop Variables
 $type-levels: 6, 5, 4, 3, 2, 1;
 $cur-level-size: $type-base-size;
+$lg-cur-level-size: $type-base-size;
 
 @each $level in $type-levels {
   $cur-level-size: $cur-level-size * $type-ratio;
+  $lg-cur-level-size: $lg-cur-level-size * $lg-type-ratio;
   h#{$level} {
     @extend %prevent-overflow;
     font-family: $heading;
     font-size: $cur-level-size;
     line-height: calc(2px + 2ex + 2px);
     margin-bottom: 0.25em;
+    @media only screen and (min-width: 992px) {
+      font-size: $lg-cur-level-size;
+    }
   }
+}
+
+html {
+  font-size: 16px;
 }
 
 body,
 body > * {
   font-family: $body;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: $normal;
   line-height: 1.5;
+  @media only screen and (min-width: 992px) {
+    font-size: 1.5rem;
+  }
 }
 
 p,
@@ -50,7 +62,7 @@ button.button {
   background-color: transparent;
   font-family: inherit;
 
-  @media screen and (-ms-high-contrast: active) {
+  @media only screen and (-ms-high-contrast: active) {
     border: 2px solid currentColor;
   }
 }

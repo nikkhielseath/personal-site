@@ -10,7 +10,6 @@ const CallToAction = (props) => {
 };
 
 const HomePage = () => {
-  const adjectives = ["Consummate Learner", "Inquisitive", "Sedulous"];
   const socialLinks = [
     { handle: "twitter", url: "https://twitter.com/SethNikhill" },
     {
@@ -34,12 +33,12 @@ const HomePage = () => {
         <div className={"hero__content"}>
           <h3 className={"hero__greet"}>Hi !</h3>
           <h1 className={"hero__intro"}>I am Nikhil Seth :)</h1>
-          <div className={"hero__adjectives"}>
-            {adjectives.map((adjective, index) => (
-              <p className={"adjective"} key={`adjective-${index}`}>
-                {adjective}
-              </p>
-            ))}
+          <div className={"hero__personal-note"}>
+            <p>
+              I have been shaping the web since I was 12. Learning with every
+              problem I faced and constructing an attitude to be less wrong
+              every day.
+            </p>
           </div>
           <div className={"hero__actions"}>
             <CallToAction>blog</CallToAction>

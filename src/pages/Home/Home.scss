@@ -40,10 +40,24 @@
     margin-bottom: 0;
   }
 
-  &__adjectives {
-    display: flex;
-    flex-direction: column;
+  &__intro {
+    margin-bottom: 0;
+  }
+
+  &__personal-note {
+    font-family: $cursive;
+    padding: 1.5rem 1.5rem 1.5rem 0;
     margin-bottom: min(40px, 2.5em);
+    @media only screen and (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+    @media only screen and (min-width: 768px) {
+      max-width: 30%;
+    }
+
+    @media only screen and (min-width: 992px) {
+      max-width: 30%;
+    }
   }
 
   &__actions {
