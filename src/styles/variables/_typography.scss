@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Satisfy&family=Yanone+Kaffeesatz:wght@700&display=swap");
+
+// Font Weights
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+// Font Families
+$heading: "Yanone Kaffeesatz", sans-serif;
+$body: "Lato", sans-serif;
+$cursive: "Satisfy", cursive;
+
+// Heading Typography
+// Awesome Type Scale Tool: https://type-scale.com/
+$type-base-size: 1rem;
+
+// Major Third
+// For mobiles screen
+$type-ratio: 1.25;
+
+// Perfect Fourth
+// For tablet screen
+$md-type-ratio: 1.333;
+
+// Perfect Fifth
+// For desktop screen
+$lg-type-ratio: 1.5;

@@ -1,0 +1,126 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/typography";
+@import "src/styles/variables/breakpoints";
+
+.home {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "hero" "." "footer";
+  min-height: 90vh;
+  @media only screen and (min-width: $desktopScreen) {
+    min-height: 100vh;
+  }
+
+  &__hero {
+    background-image: url("../../assets/blueBlob_mobile.svg");
+    background-repeat: no-repeat;
+    background-position: -90vw -10vh;
+    grid-area: hero;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "hero";
+    min-height: 70vh;
+    max-height: 80vh;
+    @media only screen and (min-width: $tabletScreen) {
+      min-height: 90vh;
+      max-height: 90vh;
+      background-image: url("../../assets/blob combination.svg");
+      background-size: 70% 100vh;
+      background-position: right bottom;
+    }
+    > * {
+      grid-area: hero;
+    }
+  }
+  &__footer {
+    grid-area: footer;
+    display: grid;
+    place-content: center;
+    @media only screen and (min-width: $desktopScreen) {
+      height: 10vh;
+    }
+  }
+}
+
+.hero {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+
+  &__greet {
+    margin-bottom: 0;
+  }
+
+  &__intro {
+    margin-bottom: 0;
+  }
+
+  &__personal-note {
+    font-family: $cursive;
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    margin-bottom: min(40px, 2.5em);
+    @media only screen and (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+    @media only screen and (min-width: 768px) {
+      max-width: 30%;
+    }
+
+    @media only screen and (min-width: 992px) {
+      max-width: 30%;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__cta {
+    background: linear-gradient(
+      $primaryGradientAngle,
+      $primary 0%,
+      $secondary 100%
+    );
+    box-shadow: 10px 10px 0 $btnShadow;
+    font-weight: $bold;
+    &:hover {
+      background: linear-gradient(
+        $primaryGradientAngle,
+        scale-color($primary, $lightness: -10%) 0%,
+        scale-color($secondary, $lightness: -10%) 100%
+      );
+      box-shadow: 10px 10px 0 scale-color($btnShadow, $lightness: -20%);
+    }
+  }
+}
+
+.footer {
+  &__signature {
+    font-family: $cursive;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 0.25em;
+    a {
+      color: $primary;
+      transition: transform 180ms ease-in-out;
+      &:visited {
+        color: $primary;
+      }
+      &:hover {
+        color: scale-color($secondary, $lightness: -20%);
+        transform: scale(1.1) translateY(-25%);
+      }
+    }
+  }
+}
