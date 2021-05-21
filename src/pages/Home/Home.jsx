@@ -1,9 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./Home.scss";
 
 const CallToAction = (props) => {
   return (
-    <a className={`button hero__cta ${props.className || ""}`} {...props}>
+    <a
+      className={`button hero__cta ${props.className || ""}`}
+      tabIndex={0}
+      {...props}
+    >
       {props.children}
     </a>
   );
@@ -29,6 +34,9 @@ const HomePage = () => {
 
   return (
     <div className={"home"}>
+      <Helmet>
+        <title>SNikhill | Home</title>
+      </Helmet>
       <header className={"home__hero"}>
         <div className={"hero__content"}>
           <h3 className={"hero__greet"}>Hi !</h3>
