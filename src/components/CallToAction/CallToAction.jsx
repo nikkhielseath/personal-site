@@ -5,9 +5,9 @@ import "./CallToAction.scss";
 const CallToAction = (props) => {
   return (
     <Link
+      {...props}
       className={`button cta ${props.className || ""}`}
       tabIndex={0}
-      {...props}
     >
       {props.children}
     </Link>

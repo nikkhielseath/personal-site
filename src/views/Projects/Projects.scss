@@ -1,0 +1,65 @@
+@import "src/styles/variables/colors";
+@import "src/styles/variables/typography";
+@import "src/styles/variables/breakpoints";
+
+.project {
+  &__container {
+    margin: 5%;
+    display: flex;
+  }
+  &__card {
+    border: 2px solid $secondary;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 0 $shadowGreen;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: 80vw;
+    @media only screen and (min-width: $tabletScreen) {
+      width: 40vw;
+    }
+    @media only screen and (min-width: $desktopScreen) {
+      padding: 2rem;
+      border-width: 4px;
+      box-shadow: 10px 10px 0 $shadowGreen;
+      width: 25vw;
+    }
+    @media only screen and (min-width: $tabletScreen) and (max-width: 1024px) {
+      width: 40vw;
+    }
+  }
+}
+
+.card {
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+    @media only screen and (min-width: $desktopScreen) {
+      margin: 1rem 0;
+    }
+  }
+
+  &__description {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    overflow: hidden;
+
+    p {
+      overflow-y: auto;
+    }
+  }
+}
+
+.detail {
+  &__title {
+    margin-bottom: 0;
+    font-weight: $normal;
+    color: $secondary;
+  }
+  &__link {
+    box-shadow: 5px 5px 0 $shadowBlue;
+  }
+}
