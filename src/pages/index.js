@@ -1,7 +1,6 @@
 import * as React from "react";
-import "../styles/style.scss";
 
-import Home from "./Home/Home"
+import Home from "../views/Home/Home";
 
 const Index = () => {
   return (
