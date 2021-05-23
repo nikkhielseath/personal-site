@@ -78,24 +78,6 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
-
-  &__cta {
-    background: linear-gradient(
-      $primaryGradientAngle,
-      $primary 0%,
-      $secondary 100%
-    );
-    box-shadow: 10px 10px 0 $btnShadow;
-    font-weight: $bold;
-    &:hover {
-      background: linear-gradient(
-        $primaryGradientAngle,
-        scale-color($primary, $lightness: -10%) 0%,
-        scale-color($secondary, $lightness: -10%) 100%
-      );
-      box-shadow: 10px 10px 0 scale-color($btnShadow, $lightness: -20%);
-    }
-  }
 }
 
 .footer {

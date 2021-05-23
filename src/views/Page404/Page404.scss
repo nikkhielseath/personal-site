@@ -1,0 +1,39 @@
+@import "src/styles/variables/typography";
+@import "src/styles/variables/breakpoints";
+
+.notFound {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+
+  @media only screen and (min-width: $desktopScreen) {
+    background-image: url("../../assets/footprints.png");
+    background-position: 60% 100%;
+    background-repeat: no-repeat;
+    background-size: auto 300px;
+  }
+  &__greet {
+    align-self: center;
+    text-align: center;
+  }
+
+  &__quote {
+    font-family: $cursive;
+    margin-bottom: min(40px, 2.5em);
+
+    @media only screen and (min-width: $desktopScreen) {
+      width: 20%;
+    }
+  }
+}
+.greet {
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__phrase {
+    font-family: $cursive;
+  }
+}

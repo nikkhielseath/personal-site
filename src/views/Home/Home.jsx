@@ -1,18 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import "./Home.scss";
-
-const CallToAction = (props) => {
-  return (
-    <a
-      className={`button hero__cta ${props.className || ""}`}
-      tabIndex={0}
-      {...props}
-    >
-      {props.children}
-    </a>
-  );
-};
+import CallToAction from "../../components/CallToAction/CallToAction";
 
 const HomePage = () => {
   const socialLinks = [
