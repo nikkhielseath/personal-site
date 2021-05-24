@@ -38,7 +38,7 @@ const HomePage = () => {
             </p>
           </div>
           <div className={"hero__actions"}>
-            <CallToAction>projects</CallToAction>
+            <CallToAction to={"/projects"}>projects</CallToAction>
             <CallToAction>blog</CallToAction>
           </div>
         </div>

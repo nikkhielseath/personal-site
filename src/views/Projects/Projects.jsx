@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
 
 import PlaceholderImg from "../../assets/placeholder.png";
@@ -55,9 +57,14 @@ const ProjectsPage = () => {
   ];
   return (
     <React.Fragment>
+      <Helmet>
+        <title>SNikhill | Projects</title>
+      </Helmet>
       <div className={"page"}>
         <header>
-          <a>Home</a>
+          <nav className={"head__nav"}>
+            <Link to={"/"}>Home</Link>
+          </nav>
         </header>
         <main className={"project"}>
           <div className={"project__hero"}>
@@ -67,8 +74,8 @@ const ProjectsPage = () => {
             </h6>
           </div>
           <div className={"project__container"}>
-            {Projects.map((props) => (
-              <ProjectItem {...props} />
+            {Projects.map((props, index) => (
+              <ProjectItem {...props} key={`project_${index}`} />
             ))}
           </div>
         </main>
