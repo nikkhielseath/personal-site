@@ -9,7 +9,9 @@ const ProjectItem = ({ name, imgURL, description }) => {
       <img className={"card__img"} alt={name} src={imgURL} />
       <div className={"card__details"}>
         <h4 className={"detail__title"}>{name}</h4>
-        <CallToAction className={"detail__link"}>Link</CallToAction>
+        <CallToAction className={"detail__link"} type={"external"}>
+          Link
+        </CallToAction>
       </div>
       <div className={"card__description"}>
         <p>{description}</p>
