@@ -30,8 +30,9 @@
 .card {
   &__details {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0.5rem 0;
     @media only screen and (min-width: $desktopScreen) {
       margin: 1rem 0;
@@ -52,9 +53,9 @@
 
 .detail {
   &__title {
-    margin-bottom: 0;
-    font-weight: $normal;
     color: $secondary;
+    overflow: auto;
+    margin-top: 0.25em;
   }
   &__link {
     box-shadow: 5px 5px 0 $shadowBlue;

@@ -5,3 +5,7 @@ public
 # Text Editors / IDE(s)
 .idea/
 .vscode/
+
+# Environment Variables
+.env.development
+.env.production

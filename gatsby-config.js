@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   siteMetadata: {
     title: "Personal Site",
@@ -20,6 +23,14 @@ module.exports = {
         path: "./src/assets/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-datocms",
+      options: {
+        apiToken: `${process.env.DATO_CMS_READ_ONLY_API}`,
+        preview: false,
+        disableLiveReload: false,
+      },
     },
   ],
 };
