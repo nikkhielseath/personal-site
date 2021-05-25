@@ -28,10 +28,12 @@
       background-size: 70% 100vh;
       background-position: right bottom;
     }
+
     > * {
       grid-area: hero;
     }
   }
+
   &__footer {
     grid-area: footer;
     display: grid;
@@ -93,12 +95,15 @@
     justify-content: center;
     gap: 1em;
     margin-bottom: 0.25em;
+
     a {
-      color: $primary;
+      color: black;
       transition: transform 180ms ease-in-out;
+
       &:visited {
-        color: $primary;
+        color: black;
       }
+
       &:hover {
         color: scale-color($secondary, $lightness: -20%);
         transform: scale(1.1) translateY(-25%);

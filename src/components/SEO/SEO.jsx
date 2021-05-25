@@ -7,11 +7,12 @@ const Seo = ({ title, description, author, twitter, openGraph }) => {
   return (
     <React.Fragment>
       <Helmet>
+        <html lang={"en"} />
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="author" content={author} />
         {SOCIAL_LINKS.map(({ url }, index) => (
-          <link rel={"me"} type={"text/html"} href={url} />
+          <link rel={"me"} type={"text/html"} href={url} key={index} />
         ))}
 
         {/*TWITTER DETAILS*/}
@@ -29,6 +30,7 @@ const Seo = ({ title, description, author, twitter, openGraph }) => {
         <meta property="og:title" content={openGraph.title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={openGraph.image} />
+        <meta property="og:image:alt" content={openGraph.imageAlt} />
       </Helmet>
     </React.Fragment>
   );
@@ -49,6 +51,7 @@ Seo.propTypes = {
     url: PropTypes.string,
     title: PropTypes.string,
     image: PropTypes.string,
+    imageAlt: PropTypes.string,
   }),
 };
 
@@ -70,6 +73,7 @@ Seo.defaultProps = {
     title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
     image:
       "https://www.datocms-assets.com/48735/1621896445-personalsiteimage.png",
+    imageAlt: "Nikhil Seth | SNikhill - Human, Learner, Developer",
   },
 };
 

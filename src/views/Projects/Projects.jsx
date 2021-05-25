@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Helmet } from "react-helmet";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
 
 import "./Projects.scss";
@@ -8,9 +7,6 @@ import "./Projects.scss";
 const ProjectsPage = ({ projects }) => {
   return (
     <React.Fragment>
-      <Helmet>
-        <title>SNikhill | Projects</title>
-      </Helmet>
       <div className={"page"}>
         <header>
           <nav className={"head__nav"}>
