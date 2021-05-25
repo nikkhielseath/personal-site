@@ -4,10 +4,17 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
-    siteUrl: "https://snikhill.tech/",
+    siteUrl: "https://snikhill.tech",
   },
   plugins: [
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://snikhill.tech",
+        stripQueryString: true,
+      },
+    },
     {
       resolve: "gatsby-plugin-sass",
       options: {
