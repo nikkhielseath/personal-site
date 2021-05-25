@@ -41,13 +41,8 @@
 
   &__description {
     display: grid;
-    place-content: center;
     height: 100%;
-    overflow: hidden;
-
-    p {
-      overflow-y: auto;
-    }
+    overflow-y: auto;
   }
 }
 
@@ -57,6 +52,7 @@
     overflow: auto;
     margin-top: 0.25em;
   }
+
   &__link {
     box-shadow: 5px 5px 0 $shadowBlue;
   }
