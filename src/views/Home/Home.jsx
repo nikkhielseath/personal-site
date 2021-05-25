@@ -19,7 +19,6 @@ const HomePage = () => {
           </div>
           <div className={"hero__actions"}>
             <CallToAction to={"/projects"}>projects</CallToAction>
-            <CallToAction to={"/blog"}>blog</CallToAction>
           </div>
         </div>
       </header>

@@ -1,5 +1,6 @@
 @import "src/styles/variables/colors";
 @import "src/styles/variables/typography";
+
 .cta {
   background: linear-gradient(
     $primaryGradientAngle,
@@ -8,6 +9,7 @@
   );
   box-shadow: 10px 10px 0 $btnShadow;
   font-weight: $bold;
+
   &:hover {
     background: linear-gradient(
       $primaryGradientAngle,
@@ -15,5 +17,16 @@
       scale-color($secondary, $lightness: -10%) 100%
     );
     box-shadow: 10px 10px 0 scale-color($btnShadow, $lightness: -20%);
+  }
+
+  &--disabled {
+    background: lightgrey !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    cursor: not-allowed !important;
+
+    &:hover {
+      box-shadow: none !important;
+    }
   }
 }

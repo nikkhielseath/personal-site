@@ -67,6 +67,7 @@ button.button {
   border: none;
   background-color: transparent;
   font-family: inherit;
+  font-size: inherit;
 
   @media only screen and (-ms-high-contrast: active) {
     border: 2px solid currentColor;
