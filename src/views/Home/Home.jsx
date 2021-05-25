@@ -1,31 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import "./Home.scss";
 import CallToAction from "../../components/CallToAction/CallToAction";
+import SOCIAL_LINKS from "../../components/SEO/socialLinks";
 
 const HomePage = () => {
-  const socialLinks = [
-    { handle: "twitter", url: "https://twitter.com/SethNikhill" },
-    {
-      handle: "email",
-      url:
-        "mailto:sethnikhil74@gmail.com?body=Hello! I was just viewing your website.",
-    },
-    {
-      handle: "github",
-      url: "https://github.com/SNikhill",
-    },
-    {
-      handle: "youtube",
-      url: "https://www.youtube.com/devicenerd",
-    },
-  ];
-
   return (
     <div className={"home"}>
-      <Helmet>
-        <title>SNikhill | Home</title>
-      </Helmet>
       <header className={"home__hero"}>
         <div className={"hero__content"}>
           <h3 className={"hero__greet"}>Hi !</h3>
@@ -45,7 +25,7 @@ const HomePage = () => {
       </header>
       <footer className={"home__footer"}>
         <div className={"footer__social-links"}>
-          {socialLinks.map(({ handle, url }, index) => (
+          {SOCIAL_LINKS.map(({ handle, url }, index) => (
             <a
               key={`socialLink-${index}`}
               href={url}
