@@ -12,6 +12,7 @@ module.exports = {
         implementation: require("sass"),
       },
     },
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",

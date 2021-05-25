@@ -30,11 +30,21 @@ const HomePage = () => {
               key={`socialLink-${index}`}
               href={url}
               target={"_blank"}
-              rel={"nofollow noreferrer"}
+              rel={"me noreferrer"}
             >
               @{handle}
             </a>
           ))}
+          <a
+            key={`socialLink-email`}
+            href={
+              "mailto:sethnikhil74@gmail.com?body=Hello! I was just viewing your website."
+            }
+            target={"_blank"}
+            rel={"nofollow noreferrer"}
+          >
+            @email
+          </a>
         </div>
         <p className={"footer__signature"}>handcrafted by Yours truly</p>
       </footer>
