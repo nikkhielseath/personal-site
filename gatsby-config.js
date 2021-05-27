@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: "https://snikhill.tech",
   },
   plugins: [
+    "gatsby-plugin-robots-txt",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-canonical-urls",
