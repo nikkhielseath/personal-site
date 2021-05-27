@@ -42,5 +42,12 @@ module.exports = {
         disableLiveReload: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        color: "#58c7c0",
+        showSpinner: false,
+      },
+    },
   ],
 };
