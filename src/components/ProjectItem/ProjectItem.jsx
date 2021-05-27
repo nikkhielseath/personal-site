@@ -1,19 +1,17 @@
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 import CallToAction from "../CallToAction/CallToAction";
 
-import PlaceholderImage from "../../assets/placeholder.png";
 import "./ProjectItem.scss";
 
 const ProjectItem = ({ name = "Name", link, image, description }) => {
-  let imgAlt = name,
-    imgSrc = PlaceholderImage;
-  if (image) {
-    imgAlt = image.alt;
-    imgSrc = `${image.url}&w=312`;
-  }
   return (
     <div className={"project__card"}>
-      <img className={"card__img"} alt={imgAlt} src={imgSrc} />
+      <GatsbyImage
+        className={"card__img"}
+        alt={image.alt}
+        image={image.gatsbyImageData}
+      />
       <div className={"card__details"}>
         <h5 className={"detail__title"}>{name}</h5>
         <CallToAction
