@@ -36,7 +36,7 @@ export const query = graphql`
         node {
           image {
             alt
-            url
+            gatsbyImageData(placeholder: BLURRED, imgixParams: { h: "200" })
           }
           name
           link
