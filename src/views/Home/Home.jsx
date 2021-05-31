@@ -12,9 +12,9 @@ const HomePage = () => {
           <h1 className={"hero__intro"}>I am Nikhil Seth :)</h1>
           <div className={"hero__personal-note"}>
             <p>
-              I have been shaping the web since I was 12. Learning with every
-              problem I faced and constructing an attitude to be less wrong
-              every day.
+              I have been shaping the web professionally for 4 years. Learning
+              with every problem I faced and constructing an attitude to be less
+              wrong every day.
             </p>
           </div>
           <div className={"hero__actions"}>
