@@ -78,7 +78,6 @@
   &__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
   }
 }
 
@@ -92,9 +91,15 @@
   &__social-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
     margin-bottom: 0.25em;
+
+    > * {
+      margin-right: 1em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
 
     a {
       color: black;
