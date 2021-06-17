@@ -96,8 +96,6 @@ button.button {
   }
 
   &:focus {
-    outline-style: solid;
-    outline-color: transparent;
     box-shadow: 0 0 0 6px scale-color($btnColor, $lightness: -40%);
   }
 
