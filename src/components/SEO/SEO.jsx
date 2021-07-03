@@ -65,14 +65,14 @@ Seo.defaultProps = {
     creator: "@SethNikhill",
     title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
     image:
-      "https://www.datocms-assets.com/48735/1621896445-personalsiteimage.png",
+      "https://www.datocms-assets.com/48735/1625302614-personalsiteimagenew.png",
   },
   openGraph: {
     siteName: "Nikhil Seth | SNikhill - Human, Learner, Developer",
     url: "",
     title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
     image:
-      "https://www.datocms-assets.com/48735/1621896445-personalsiteimage.png",
+      "https://www.datocms-assets.com/48735/1625302614-personalsiteimagenew.png",
     imageAlt: "Nikhil Seth | SNikhill - Human, Learner, Developer",
   },
 };
