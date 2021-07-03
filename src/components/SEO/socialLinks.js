@@ -6,7 +6,7 @@ const SOCIAL_LINKS = [
   },
   {
     handle: "youtube",
-    url: "https://www.youtube.com/devicenerd",
+    url: "https://www.youtube.com/SNikhill",
   },
 ];
 export default SOCIAL_LINKS;
