@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import SOCIAL_LINKS from "./socialLinks";
 
+const SITE_TITLE = "SNikhill - Human, Learner, Engineer";
+const PERSONAL_DESCRIPTION =
+  "SNikhill is a Consistent Learner, Voracious Reader, Human, Frontend Engineer and much more.";
+
 const Seo = ({ title, description, author, twitter, openGraph }) => {
   return (
     <React.Fragment>
@@ -17,8 +21,14 @@ const Seo = ({ title, description, author, twitter, openGraph }) => {
 
         {/*TWITTER DETAILS*/}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content={twitter.username} />
-        <meta name="twitter:creator" content={twitter.creator} />
+        <meta
+          property="twitter:site"
+          content={twitter.username || "@SethNikhill"}
+        />
+        <meta
+          name="twitter:creator"
+          content={twitter.creator || "@SethNikhill"}
+        />
         <meta property="twitter:title" content={twitter.title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={twitter.image} />
@@ -56,24 +66,23 @@ Seo.propTypes = {
 };
 
 Seo.defaultProps = {
-  title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
-  description:
-    "Nikhil Seth aka SNikhill is a forever learner, human, blogger, web developer and much more.",
+  title: SITE_TITLE,
+  description: PERSONAL_DESCRIPTION,
   author: "SNikhill",
   twitter: {
     username: "@SethNikhill",
     creator: "@SethNikhill",
-    title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
+    title: SITE_TITLE,
     image:
       "https://www.datocms-assets.com/48735/1625302614-personalsiteimagenew.png",
   },
   openGraph: {
-    siteName: "Nikhil Seth | SNikhill - Human, Learner, Developer",
-    url: "",
-    title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
+    siteName: SITE_TITLE,
+    url: "https://snikhill.tech",
+    title: SITE_TITLE,
     image:
       "https://www.datocms-assets.com/48735/1625302614-personalsiteimagenew.png",
-    imageAlt: "Nikhil Seth | SNikhill - Human, Learner, Developer",
+    imageAlt: SITE_TITLE,
   },
 };
 

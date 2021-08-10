@@ -4,9 +4,9 @@ import Seo from '../components/SEO/SEO'
 import ProjectsPage from '../views/Projects/Projects'
 
 const Projects = ({ data }) => {
-  const pageTitle = 'Nikhil Seth | SNikhill\'s Projects '
+  const pageTitle = 'SNikhill\'s Projects'
   const description =
-    'Nikhil Seth aka SNikhill develops web application and shapes the future with his open source contribution.'
+    'SNikhill develops web application and shapes the future with his open source contribution.'
   const pageImage =
     'https://www.datocms-assets.com/48735/1621896576-projectsimage.png'
   return (
@@ -19,6 +19,7 @@ const Projects = ({ data }) => {
           image: pageImage,
         }}
         openGraph={{
+          siteName: pageTitle,
           title: pageTitle,
           image: pageImage,
           imageAlt: pageTitle,

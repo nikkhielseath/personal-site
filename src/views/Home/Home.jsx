@@ -9,7 +9,7 @@ const HomePage = () => {
       <header className={"home__hero"}>
         <div className={"hero__content"}>
           <h3 className={"hero__greet"}>Hi !</h3>
-          <h1 className={"hero__intro"}>I am Nikhil Seth :)</h1>
+          <h1 className={"hero__intro"}>I am SNikhill :)</h1>
           <div className={"hero__personal-note"}>
             <p>
               I have been shaping the web professionally for 4 years. Learning
