@@ -28,6 +28,7 @@
 
       &__background {
         position: fixed;
+        transition: opacity 0.9s;
       }
 
       &__foreground {
