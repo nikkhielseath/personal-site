@@ -1,14 +1,14 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Seo from '../components/SEO/SEO'
-import ProjectsPage from '../views/Projects/Projects'
+import React from "react";
+import { graphql } from "gatsby";
+import Seo from "../components/SEO/SEO";
+import ProjectsPage from "../views/Projects/Projects";
 
 const Projects = ({ data }) => {
-  const pageTitle = 'SNikhill\'s Projects'
+  const pageTitle = "SNikhill's Projects";
   const description =
-    'SNikhill develops web application and shapes the future with his open source contribution.'
+    "SNikhill develops web application and shapes the future with his open source contribution.";
   const pageImage =
-    'https://www.datocms-assets.com/48735/1621896576-projectsimage.png'
+    "https://www.datocms-assets.com/48735/1621896576-projectsimage.png";
   return (
     <React.Fragment>
       <Seo
@@ -25,14 +25,14 @@ const Projects = ({ data }) => {
           imageAlt: pageTitle,
         }}
       />
-      <ProjectsPage projects={data.allDatoCmsProject.edges}/>
+      <ProjectsPage projects={data.allDatoCmsProject.edges} />
     </React.Fragment>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query ProjectsQuery {
-    allDatoCmsProject(sort: {fields: priorityOrder, order: DESC}) {
+    allDatoCmsProject(sort: { fields: priorityOrder, order: DESC }) {
       edges {
         node {
           image {
@@ -46,6 +46,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Projects
+export default Projects;

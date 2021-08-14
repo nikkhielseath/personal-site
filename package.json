@@ -12,7 +12,8 @@
     "start": "gatsby develop -H 0.0.0.0 -p 8000",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prepare": "husky install"
   },
   "dependencies": {
     "gatsby": "^3.4.1",
@@ -35,6 +36,12 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.3.2",
     "sass": "^1.32.13"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
