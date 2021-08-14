@@ -6,11 +6,6 @@ header {
   align-content: center;
   min-height: 10vh;
 
-  @media only screen and (min-width: $desktopScreen) {
-    position: fixed;
-    right: 3%;
-  }
-
   .head__nav {
     display: flex;
     justify-content: center;

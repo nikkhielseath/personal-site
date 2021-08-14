@@ -2,12 +2,18 @@
 @import "src/styles/variables/typography";
 
 .page {
+  $headerZIndex: 1;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header" "main" "footer";
 
   header {
     grid-area: header;
+    z-index: $headerZIndex;
+    @media only screen and (min-width: $desktopScreen) {
+      position: fixed;
+      right: 3%;
+    }
   }
 
   main {
