@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
+import Header from "../../components/Layout/Header/Header";
 
 import "./Projects.scss";
 
@@ -8,11 +8,7 @@ const ProjectsPage = ({ projects }) => {
   return (
     <React.Fragment>
       <div className={"page"}>
-        <header>
-          <nav className={"head__nav"}>
-            <Link to={"/"}>Home</Link>
-          </nav>
-        </header>
+        <Header />
         <main className={"project parallax"}>
           <div className={"project__hero parallax__background"}>
             <h1 className={"hero__title"}>Projects</h1>
