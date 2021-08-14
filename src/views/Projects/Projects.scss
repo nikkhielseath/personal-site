@@ -2,36 +2,6 @@
 @import "src/styles/variables/typography";
 @import "src/styles/variables/breakpoints";
 
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "main" "footer";
-
-
-  main {
-    grid-area: main;
-  }
-
-  @media only screen and (min-width: $desktopScreen) {
-    .parallax {
-      $backgroundHeight: 60vh;
-      $backgroundZIndex: 1;
-      position: relative;
-
-      &__background {
-        position: fixed;
-      }
-
-      &__foreground {
-        background: white;
-        margin-top: $backgroundHeight;
-        z-index: $backgroundZIndex + 1;
-      }
-    }
-
-  }
-}
-
 .project {
   display: flex;
   flex-direction: column;
@@ -62,15 +32,15 @@
       }
     }
   }
-}
 
-.hero {
-  &__title {
-    margin-bottom: 0.65rem;
-  }
+  .hero {
+    &__title {
+      margin-bottom: 0.65rem;
+    }
 
-  &__phrase {
-    font-family: $cursive;
-    font-weight: $normal;
+    &__phrase {
+      font-family: $cursive;
+      font-weight: $normal;
+    }
   }
 }

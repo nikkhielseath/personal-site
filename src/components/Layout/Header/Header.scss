@@ -2,13 +2,13 @@
 @import "src/styles/variables/typography";
 
 header {
-  grid-area: header;
-  min-height: 10vh;
   display: grid;
   align-content: center;
+  min-height: 10vh;
 
   @media only screen and (min-width: $desktopScreen) {
-    margin-right: 3%;
+    position: fixed;
+    right: 3%;
   }
 
   .head__nav {
