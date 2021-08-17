@@ -1,12 +1,27 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import debounce from "lodash/debounce";
 import Header from "../Header/Header";
 import "./Page.scss";
 
-const Page = ({ children }) => {
-  const pageRef = useRef();
+const PageHero = ({ heroTitle, heroPhrase, className = "" }) => {
+  return (
+    <div className={`content__hero ${className}`}>
+      <h1 className={"hero__title"}>{heroTitle}</h1>
+      <h6 className={"hero__phrase"}>{heroPhrase}</h6>
+    </div>
+  );
+};
+
+const Page = ({
+  className = "",
+  children,
+  heroPhrase,
+  heroTitle,
+  mainClassName = "",
+  heroClassName = "",
+}) => {
   /**
-   * Purpose of `calculateOpacity` is to calculate the opcaity for Parallax Background based on the Scroll
+   * Purpose of `calculateOpacity` is to calculate the opacity for Parallax Background based on the Scroll
    * Position of the user
    *
    * @param {Number} scrollPosition - Current Scroll Position
@@ -34,17 +49,24 @@ const Page = ({ children }) => {
   useEffect(() => {
     if (window.innerWidth >= 992) {
       const handleParallaxScroll = () => {
-        const parallaxBackground =
-          pageRef.current.getElementsByClassName("parallax__background")[0] ||
-          null;
-        if (parallaxBackground) {
-          parallaxBackground.style.opacity = calculateOpacity(
-            window.pageYOffset,
-            parallaxBackground.getBoundingClientRect().y +
-              parallaxBackground.offsetHeight / 4,
-            parallaxBackground.offsetHeight,
-            parallaxBackground.style.opacity
-          );
+        const parallax = document.getElementsByClassName("parallax");
+        if (parallax.length) {
+          const parallaxBackground =
+            parallax[0].getElementsByClassName("parallax__background")[0] ||
+            null;
+          if (parallaxBackground) {
+            parallaxBackground.style.opacity = calculateOpacity(
+              window.pageYOffset,
+              parallaxBackground.getBoundingClientRect().y +
+                parallaxBackground.offsetHeight / 4,
+              parallaxBackground.offsetHeight,
+              parallaxBackground.style.opacity
+            );
+          } else {
+            throw new Error(
+              "No Parallax Background Found. Parallax class requires a Background element"
+            );
+          }
         }
       };
       window.addEventListener("scroll", debounce(handleParallaxScroll, 70));
@@ -53,9 +75,16 @@ const Page = ({ children }) => {
   }, []);
 
   return (
-    <div className={"page"} ref={pageRef}>
+    <div className={`page ${className}`}>
       <Header />
-      {children}
+      <main className={`page__content ${mainClassName}`}>
+        <PageHero
+          className={`${heroClassName}`}
+          heroPhrase={heroPhrase}
+          heroTitle={heroTitle}
+        />
+        {children}
+      </main>
     </div>
   );
 };

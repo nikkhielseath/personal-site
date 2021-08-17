@@ -1,23 +1,6 @@
-@import "src/styles/variables/colors";
-@import "src/styles/variables/typography";
 @import "src/styles/variables/breakpoints";
 
 .project {
-  display: flex;
-  flex-direction: column;
-  margin: 0 3% 3% 3%;
-
-  &__hero {
-    align-self: center;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    height: 40vh;
-    @media only screen and (min-width: $desktopScreen) {
-      height: 60vh;
-    }
-  }
-
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -30,17 +13,6 @@
       @media only screen and (min-width: $desktopScreen) {
         margin-bottom: 5rem;
       }
-    }
-  }
-
-  .hero {
-    &__title {
-      margin-bottom: 0.65rem;
-    }
-
-    &__phrase {
-      font-family: $cursive;
-      font-weight: $normal;
     }
   }
 }
