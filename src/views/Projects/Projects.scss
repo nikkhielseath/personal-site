@@ -2,49 +2,6 @@
 @import "src/styles/variables/typography";
 @import "src/styles/variables/breakpoints";
 
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "main" "footer";
-
-  header {
-    grid-area: header;
-    min-height: 10vh;
-    display: grid;
-    align-content: center;
-
-    @media only screen and (min-width: $desktopScreen) {
-      margin-right: 3%;
-    }
-
-    .head__nav {
-      display: flex;
-      justify-content: center;
-      font-weight: $bold;
-      @media only screen and (min-width: $desktopScreen) {
-        justify-content: flex-end;
-      }
-
-      > * {
-        text-decoration: none;
-        color: #000;
-        font-size: 1.25rem;
-        @media only screen and (min-width: $desktopScreen) {
-          font-size: 1.5rem;
-        }
-
-        &:hover {
-          border-bottom: 3px solid lightgray;
-        }
-      }
-    }
-  }
-
-  main {
-    grid-area: main;
-  }
-}
-
 .project {
   display: flex;
   flex-direction: column;
@@ -75,15 +32,15 @@
       }
     }
   }
-}
 
-.hero {
-  &__title {
-    margin-bottom: 0.65rem;
-  }
+  .hero {
+    &__title {
+      margin-bottom: 0.65rem;
+    }
 
-  &__phrase {
-    font-family: $cursive;
-    font-weight: $normal;
+    &__phrase {
+      font-family: $cursive;
+      font-weight: $normal;
+    }
   }
 }

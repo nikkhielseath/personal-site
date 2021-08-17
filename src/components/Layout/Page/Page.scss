@@ -1,0 +1,41 @@
+@import "src/styles/variables/breakpoints";
+@import "src/styles/variables/typography";
+
+.page {
+  $headerZIndex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+
+  header {
+    grid-area: header;
+    z-index: $headerZIndex;
+    @media only screen and (min-width: $desktopScreen) {
+      position: fixed;
+      right: 3%;
+    }
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  @media only screen and (min-width: $desktopScreen) {
+    .parallax {
+      $backgroundHeight: 60vh;
+      $backgroundZIndex: 1;
+      position: relative;
+
+      &__background {
+        position: fixed;
+        transition: opacity 0.9s;
+      }
+
+      &__foreground {
+        background: white;
+        margin-top: $backgroundHeight;
+        z-index: $backgroundZIndex + 1;
+      }
+    }
+  }
+}
