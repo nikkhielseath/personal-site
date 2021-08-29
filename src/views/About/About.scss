@@ -1,0 +1,10 @@
+@import "src/styles/variables/breakpoints";
+
+.about {
+  &__description {
+    @media only screen and (min-width: $desktopScreen) {
+      padding: 0 25%;
+    }
+    padding: 0 3rem;
+  }
+}
