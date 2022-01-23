@@ -3,7 +3,7 @@ require("dotenv").config({
 });
 module.exports = {
   siteMetadata: {
-    title: "Nikhil Seth | SNikhill - Human, Learner, Developer",
+    title: "SNikhill - Human, Learner, Developer",
     siteUrl: "https://snikhill.tech",
   },
   plugins: [
