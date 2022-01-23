@@ -5,7 +5,7 @@
   $headerZIndex: 1;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header" "content" "footer";
 
   header {
     grid-area: header;
@@ -16,8 +16,11 @@
     }
   }
 
-  main {
-    grid-area: main;
+  &__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 3% 3% 3%;
   }
 
   @media only screen and (min-width: $desktopScreen) {
@@ -37,5 +40,29 @@
         z-index: $backgroundZIndex + 1;
       }
     }
+  }
+}
+
+.content {
+  &__hero {
+    align-self: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    height: 40vh;
+    @media only screen and (min-width: $desktopScreen) {
+      height: 60vh;
+    }
+  }
+}
+
+.hero {
+  &__title {
+    margin-bottom: 0.65rem;
+  }
+
+  &__phrase {
+    font-family: $cursive;
+    font-weight: $normal;
   }
 }
