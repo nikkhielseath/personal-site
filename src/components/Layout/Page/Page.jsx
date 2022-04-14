@@ -48,7 +48,7 @@ const Page = ({
     const handleParallaxScroll = () => {
       const parallax = document.getElementsByClassName("parallax");
       const parallaxBackground =
-        parallax[0].getElementsByClassName("parallax__background")[0] || null;
+        parallax?.[0].getElementsByClassName("parallax__background")[0] || null;
       if (window.innerWidth >= 992 && parallaxBackground) {
         parallaxBackground.style.opacity = calculateOpacity(
           window.pageYOffset,
