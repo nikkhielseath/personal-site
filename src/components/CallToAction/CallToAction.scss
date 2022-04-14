@@ -13,8 +13,8 @@
   &:hover {
     background: linear-gradient(
       $primaryGradientAngle,
-      scale-color($primary, $lightness: -10%) 0%,
-      scale-color($secondary, $lightness: -10%) 100%
+      $secondary 0%,
+      $primary 100%
     );
     box-shadow: 10px 10px 0 scale-color($btnShadow, $lightness: -20%);
   }
