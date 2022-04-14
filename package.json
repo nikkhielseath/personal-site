@@ -49,6 +49,9 @@
     "sass": "^1.32.13"
   },
   "lint-staged": {
-    "*.{jsx,js,scss,md}": "prettier --write"
+    "*.{jsx,js,scss,md}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
   }
 }
