@@ -7,42 +7,56 @@ const SITE_TITLE = "SNikhill - Human, Learner, Engineer";
 const PERSONAL_DESCRIPTION =
   "SNikhill is a Consistent Learner, Voracious Reader, Human, Software Engineer and much more.";
 
-const Seo = ({ title, description, author, twitter, openGraph }) => (
-  <Helmet>
-    <html lang="en" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
-    {SOCIAL_LINKS.map(({ id, url }) => (
-      <link type="text/html" href={url} key={id} />
-    ))}
+const Seo = ({
+  title,
+  description,
+  author,
+  twitter,
+  openGraph,
+  canonicalURL,
+}) => {
+  return (
+    <Helmet>
+      <html lang="en" />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="author" content={author} />
+      {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+      {SOCIAL_LINKS.map(({ id, url }) => (
+        <link type="text/html" href={url} key={id} />
+      ))}
 
-    {/* TWITTER DETAILS */}
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:site"
-      content={twitter.username || "@SethNikhill"}
-    />
-    <meta name="twitter:creator" content={twitter.creator || "@SethNikhill"} />
-    <meta property="twitter:title" content={twitter.title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={twitter.image} />
+      {/* TWITTER DETAILS */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:site"
+        content={twitter.username || "@SethNikhill"}
+      />
+      <meta
+        name="twitter:creator"
+        content={twitter.creator || "@SethNikhill"}
+      />
+      <meta property="twitter:title" content={twitter.title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={twitter.image} />
 
-    {/* OPEN GRAPHS */}
-    <meta property="og:site_name" content={openGraph.siteName} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={openGraph.url} />
-    <meta property="og:title" content={openGraph.title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={openGraph.image} />
-    <meta property="og:image:alt" content={openGraph.imageAlt} />
-  </Helmet>
-);
+      {/* OPEN GRAPHS */}
+      <meta property="og:site_name" content={openGraph.siteName} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={openGraph.url} />
+      <meta property="og:title" content={openGraph.title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={openGraph.image} />
+      <meta property="og:image:alt" content={openGraph.imageAlt} />
+    </Helmet>
+  );
+};
 
 Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   author: PropTypes.string,
+  canonicalURL: PropTypes.string,
   twitter: PropTypes.shape({
     username: PropTypes.string,
     creator: PropTypes.string,
@@ -62,6 +76,7 @@ Seo.defaultProps = {
   title: SITE_TITLE,
   description: PERSONAL_DESCRIPTION,
   author: "SNikhill",
+  canonicalURL: "",
   twitter: {
     username: "@SethNikhill",
     creator: "@SethNikhill",

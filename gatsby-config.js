@@ -11,10 +11,11 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-canonical-urls",
+      resolve: "gatsby-plugin-react-helmet-canonical-urls",
       options: {
         siteUrl: "https://snikhill.tech",
-        stripQueryString: true,
+        noHash: true,
+        noQueryString: true,
       },
     },
     {
@@ -59,7 +60,7 @@ module.exports = {
     {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: "4ad1d28a30d5932c3e209b6897a178",
+        apiToken: process.env.DATO_CMS_READ_ONLY_API,
         preview: false,
         disableLiveReload: false,
       },

@@ -6,10 +6,10 @@ import "./BlogPost.scss";
 
 const BlogPost = ({ markdownRemark }) => {
   const { frontmatter, html } = markdownRemark;
-  const { title, subtitle } = frontmatter;
+  const { title, subtitle, canonicalURL } = frontmatter;
   return (
     <>
-      <SEO title={title} description={subtitle} />
+      <SEO title={title} description={subtitle} canonicalURL={canonicalURL} />
       <Page
         heroTitle={title}
         heroPhrase={subtitle}

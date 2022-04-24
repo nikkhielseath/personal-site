@@ -20,6 +20,7 @@ export const pageQuery = graphql`
         slug
         title
         subtitle
+        canonicalURL
       }
     }
   }

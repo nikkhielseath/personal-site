@@ -17,11 +17,11 @@
   },
   "dependencies": {
     "gatsby": "^4.12.1",
-    "gatsby-plugin-canonical-urls": "^4.12.1",
     "gatsby-plugin-gatsby-cloud": "^4.12.1",
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-nprogress": "^4.12.1",
     "gatsby-plugin-react-helmet": "^5.12.1",
+    "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sass": "^5.12.1",
     "gatsby-plugin-sharp": "^4.12.1",

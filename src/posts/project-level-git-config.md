@@ -1,8 +1,9 @@
 ---
-slug: "/blog/my-first-post"
-date: "2019-05-04"
-title: "My first blog post with a very very very large title"
-subtitle: "A New Post with a very vvery very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very ery very very large subtitle"
+slug: "/blog/project-level-git-config"
+date: "2022-04-03"
+title: "Project level git config"
+subtitle: "Setup multiple git configs"
+canonicalURL: "https://dev.to/snikhill/project-level-git-config-5cam"
 ---
 
 Last week, I completely shifted my system to Arch Linux and during this process, I lost some config(s), settings, etc.
