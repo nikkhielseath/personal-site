@@ -6,7 +6,7 @@ import "./Page.scss";
 const PageHero = ({ heroTitle, heroPhrase, className = "" }) => (
   <div className={`content__hero ${className}`}>
     <h1 className="hero__title">{heroTitle}</h1>
-    <h6 className="hero__phrase">{heroPhrase}</h6>
+    {heroPhrase && <h6 className="hero__phrase">{heroPhrase}</h6>}
   </div>
 );
 

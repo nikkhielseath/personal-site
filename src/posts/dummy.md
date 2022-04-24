@@ -1,8 +1,8 @@
 ---
 slug: "/blog/my-first-post"
 date: "2019-05-04"
-title: "My first blog post"
-subtitle: "A New Post"
+title: "My first blog post with a very very very large title"
+subtitle: "A New Post with a very vvery very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very ery very very large subtitle"
 ---
 
 Last week, I completely shifted my system to Arch Linux and during this process, I lost some config(s), settings, etc.

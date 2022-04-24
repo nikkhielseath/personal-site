@@ -4,20 +4,42 @@
 .blogPost {
   overflow: hidden;
 
-  &__content {
-    $heading-levels: 6, 5, 4, 3, 2, 1;
-    @media only screen and (min-width: $desktopScreen) {
-      padding: 0 25%;
-      @each $level in $heading-levels {
-        h#{$level} {
-          margin-top: 0.25em;
-        }
-      }
-    }
-    padding: 0 3rem;
+  @media only screen and (min-width: $desktopScreen) {
+    padding: 0 25%;
+  }
 
+  padding: 0 3rem;
+  &__hero {
+    height: auto;
+    .hero__title {
+      text-align: left;
+      word-wrap: normal;
+    }
+
+    .hero__phrase {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 0 3em;
+    }
+  }
+
+  &__content {
     p {
       margin: 1rem 0;
+    }
+  }
+
+  $heading-levels: 6, 5, 4, 3, 2, 1;
+  $cur-level-size: 1rem;
+  $type-ratio: 1.333;
+  @each $level in $heading-levels {
+    $cur-level-size: $cur-level-size * $type-ratio;
+    h#{$level} {
+      @media only screen and (min-width: $desktopScreen) {
+        margin-top: 0.25em;
+        font-size: $cur-level-size;
+      }
     }
   }
 }

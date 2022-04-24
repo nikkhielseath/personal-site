@@ -49,7 +49,7 @@
     display: grid;
     place-content: center;
     text-align: center;
-    height: 40vh;
+    min-height: 40vh;
     @media only screen and (min-width: $desktopScreen) {
       height: 60vh;
     }

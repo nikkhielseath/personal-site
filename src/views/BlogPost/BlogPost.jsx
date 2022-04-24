@@ -14,7 +14,7 @@ const BlogPost = ({ markdownRemark }) => {
         heroTitle={title}
         heroPhrase={subtitle}
         mainClassName="blogPost"
-        heroClassName=""
+        heroClassName="blogPost__hero"
       >
         <div
           className="blogPost__content"
