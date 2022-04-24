@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
+
 module.exports = {
   siteMetadata: {
     title: "SNikhill - Human, Learner, Developer",
@@ -36,9 +37,17 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: "posts",
+      },
+    },
+    "gatsby-transformer-remark",
+    {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: `${process.env.DATO_CMS_READ_ONLY_API}`,
+        apiToken: "4ad1d28a30d5932c3e209b6897a178",
         preview: false,
         disableLiveReload: false,
       },
