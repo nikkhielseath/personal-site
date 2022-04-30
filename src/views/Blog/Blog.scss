@@ -28,7 +28,14 @@
     }
   }
 
-  &__details {
-    font-size: 1rem;
+  &__meta {
+    @media only screen and (min-width: $desktopScreen) {
+      font-size: 1rem;
+    }
+  }
+
+  &__description {
+    color: #202020;
+    margin-top: 0.5rem;
   }
 }
