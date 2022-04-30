@@ -1,0 +1,20 @@
+%prevent-overflow {
+  margin-top: 0;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+%reduce-desktop-heading-size {
+  $heading-levels: 6, 5, 4, 3, 2, 1;
+  $cur-level-size: 1rem;
+  $type-ratio: 1.333;
+  @each $level in $heading-levels {
+    $cur-level-size: $cur-level-size * $type-ratio;
+    h#{$level} {
+      @media only screen and (min-width: $desktopScreen) {
+        margin-top: 0.25em;
+        font-size: $cur-level-size;
+      }
+    }
+  }
+}
