@@ -3,8 +3,6 @@
 @import "src/styles/variables/partials";
 
 .blog {
-  @extend %reduce-desktop-heading-size;
-
   &__description {
     @media only screen and (min-width: $desktopScreen) {
       padding: 0 25%;
@@ -14,6 +12,7 @@
 }
 
 .post {
+  @extend %reduce-desktop-heading-size;
   &:first-of-type {
     margin: 0;
   }
@@ -22,6 +21,11 @@
 
   &__title {
     margin: 0;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
   }
 
   &__details {
