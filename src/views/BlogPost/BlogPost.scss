@@ -1,7 +1,9 @@
 @import "src/styles/variables/breakpoints";
 @import "src/styles/variables/colors";
+@import "src/styles/variables/partials";
 
 .blogPost {
+  @extend %reduce-desktop-heading-size;
   overflow: hidden;
 
   @media only screen and (min-width: $desktopScreen) {
@@ -16,24 +18,15 @@
       word-wrap: normal;
       hyphens: none;
     }
+
+    @media only screen and (max-width: $mobileScreen) {
+      min-height: 0;
+    }
   }
 
   &__content {
     p {
       margin: 1rem 0;
-    }
-  }
-
-  $heading-levels: 6, 5, 4, 3, 2, 1;
-  $cur-level-size: 1rem;
-  $type-ratio: 1.333;
-  @each $level in $heading-levels {
-    $cur-level-size: $cur-level-size * $type-ratio;
-    h#{$level} {
-      @media only screen and (min-width: $desktopScreen) {
-        margin-top: 0.25em;
-        font-size: $cur-level-size;
-      }
     }
   }
 }
