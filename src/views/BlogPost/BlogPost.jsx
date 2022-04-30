@@ -6,7 +6,7 @@ import "./BlogPost.scss";
 
 const BlogPost = ({ markdownRemark }) => {
   const { frontmatter, html } = markdownRemark;
-  const { title, subtitle, canonicalURL } = frontmatter;
+  const { title, subtitle, canonicalURL, date } = frontmatter;
   return (
     <>
       <SEO title={title} description={subtitle} canonicalURL={canonicalURL} />
@@ -16,6 +16,7 @@ const BlogPost = ({ markdownRemark }) => {
         mainClassName="blogPost"
         heroClassName="blogPost__hero"
       >
+        <small className="blogPost__meta">{date}</small>
         <div
           className="blogPost__content"
           dangerouslySetInnerHTML={{ __html: html }}

@@ -24,6 +24,11 @@
     }
   }
 
+  &__meta {
+    color: dimgray;
+    text-align: center;
+  }
+
   &__content {
     p {
       margin: 1rem 0;

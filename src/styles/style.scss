@@ -54,6 +54,12 @@ li {
   @extend %prevent-overflow;
 }
 
+small {
+  @media only screen and (min-width: $desktopScreen) {
+    font-size: 1rem;
+  }
+}
+
 a.button {
   text-decoration: none;
 }

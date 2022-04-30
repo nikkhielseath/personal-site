@@ -11,7 +11,7 @@ const PostDetails = ({ title, date, url, description }) => {
           {title}
         </a>
       </h3>
-      <small className="post__details">{date}</small>
+      <small className="post__meta">{date}</small>
       <p className="post__description">{description}</p>
     </div>
   );
@@ -20,7 +20,7 @@ const PostDetails = ({ title, date, url, description }) => {
 const BlogPage = ({ blogPosts = [] }) => (
   <Page
     heroTitle={"Blog"}
-    heroPhrase={"tales written by me"}
+    heroPhrase={"Learnings from my experience"}
     mainClassName="blog"
     heroClassName=""
   >
