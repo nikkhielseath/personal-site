@@ -7,7 +7,6 @@ const BlogList = ({
   data, // this prop will be injected by the GraphQL query below.
 }) => {
   const blogPosts = data.allMarkdownRemark.nodes;
-  console.log("DATA", data);
   return (
     <>
       <BlogPage blogPosts={blogPosts} />
