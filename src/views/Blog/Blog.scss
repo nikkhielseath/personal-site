@@ -1,0 +1,18 @@
+@import "src/styles/variables/breakpoints";
+@import "src/styles/variables/colors";
+
+.blog {
+  &__description {
+    @media only screen and (min-width: $desktopScreen) {
+      padding: 0 25%;
+    }
+    padding: 0 3rem;
+
+    p {
+      margin: 1rem 0;
+      mark {
+        background-color: $primary;
+      }
+    }
+  }
+}
