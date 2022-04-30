@@ -12,7 +12,7 @@ const BlogPost = ({ markdownRemark }) => {
       <SEO title={title} description={subtitle} canonicalURL={canonicalURL} />
       <Page
         heroTitle={title}
-        heroPhrase={subtitle}
+        heroPhrase={""}
         mainClassName="blogPost"
         heroClassName="blogPost__hero"
       >

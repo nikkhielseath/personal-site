@@ -14,13 +14,7 @@
     .hero__title {
       text-align: left;
       word-wrap: normal;
-    }
-
-    .hero__phrase {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      padding: 0 3em;
+      hyphens: none;
     }
   }
 
