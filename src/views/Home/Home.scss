@@ -79,8 +79,11 @@
     display: flex;
     flex-wrap: wrap;
 
-    .cta:last-of-type {
+    .cta {
       margin-left: 1rem;
+    }
+    .cta:first-of-type {
+      margin-left: 0;
     }
   }
 }

@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 public
+.eslintcache
 
 # Text Editors / IDE(s)
 .idea/

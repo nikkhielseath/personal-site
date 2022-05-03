@@ -6,7 +6,7 @@ import "./Page.scss";
 const PageHero = ({ heroTitle, heroPhrase, className = "" }) => (
   <div className={`content__hero ${className}`}>
     <h1 className="hero__title">{heroTitle}</h1>
-    <h6 className="hero__phrase">{heroPhrase}</h6>
+    {heroPhrase && <h6 className="hero__phrase">{heroPhrase}</h6>}
   </div>
 );
 
@@ -48,17 +48,20 @@ const Page = ({
     const handleParallaxScroll = () => {
       const parallax = document.getElementsByClassName("parallax");
       const parallaxBackground =
-        parallax?.[0].getElementsByClassName("parallax__background")[0] || null;
-      if (window.innerWidth >= 992 && parallaxBackground) {
-        parallaxBackground.style.opacity = calculateOpacity(
-          window.pageYOffset,
-          parallaxBackground.getBoundingClientRect().y +
-            parallaxBackground.offsetHeight / 4,
-          parallaxBackground.offsetHeight,
-          parallaxBackground.style.opacity
-        );
-      } else {
-        parallaxBackground.style.opacity = 1;
+        parallax?.[0]?.getElementsByClassName("parallax__background")[0] ||
+        null;
+      if (parallaxBackground) {
+        if (window.innerWidth >= 992) {
+          parallaxBackground.style.opacity = calculateOpacity(
+            window.pageYOffset,
+            parallaxBackground.getBoundingClientRect().y +
+              parallaxBackground.offsetHeight / 4,
+            parallaxBackground.offsetHeight,
+            parallaxBackground.style.opacity
+          );
+        } else {
+          parallaxBackground.style.opacity = 1;
+        }
       }
     };
     window.addEventListener("scroll", debounce(handleParallaxScroll, 70));

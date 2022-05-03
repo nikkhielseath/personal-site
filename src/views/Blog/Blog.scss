@@ -1,0 +1,35 @@
+@import "src/styles/variables/breakpoints";
+@import "src/styles/variables/colors";
+@import "src/styles/variables/partials";
+
+.blog {
+  &__description {
+    @media only screen and (min-width: $desktopScreen) {
+      padding: 0 25%;
+    }
+    padding: 0 3rem;
+  }
+}
+
+.post {
+  @extend %reduce-desktop-heading-size;
+  &:first-of-type {
+    margin: 0;
+  }
+
+  margin: 3rem 0;
+
+  &__title {
+    margin: 0;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &__description {
+    color: #202020;
+    margin-top: 0.5rem;
+  }
+}
