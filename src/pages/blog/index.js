@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import SEO from "../../components/SEO/SEO";
 
 import BlogPage from "../../views/Blog/Blog";
 
@@ -9,6 +10,7 @@ const BlogList = ({
   const blogPosts = data.allMarkdownRemark.nodes;
   return (
     <>
+      <SEO title="Blog" />
       <BlogPage blogPosts={blogPosts} />
     </>
   );
