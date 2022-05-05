@@ -54,6 +54,7 @@ module.exports = {
               inlineCodeMarker: "÷",
             },
           },
+          "gatsby-remark-images-anywhere",
         ],
       },
     },
