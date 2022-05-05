@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
+
 module.exports = {
   siteMetadata: {
     title: "SNikhill - Human, Learner, Developer",
@@ -10,10 +11,11 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-canonical-urls",
+      resolve: "gatsby-plugin-react-helmet-canonical-urls",
       options: {
         siteUrl: "https://snikhill.tech",
-        stripQueryString: true,
+        noHash: true,
+        noQueryString: true,
       },
     },
     {
@@ -36,9 +38,30 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: "posts",
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              inlineCodeMarker: "÷",
+            },
+          },
+          "gatsby-remark-images-anywhere",
+        ],
+      },
+    },
+    {
       resolve: "gatsby-source-datocms",
       options: {
-        apiToken: `${process.env.DATO_CMS_READ_ONLY_API}`,
+        apiToken: process.env.DATO_CMS_READ_ONLY_API,
         preview: false,
         disableLiveReload: false,
       },

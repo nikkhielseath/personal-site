@@ -1,10 +1,12 @@
 const SOCIAL_LINKS = [
-  { handle: "twitter", url: "https://twitter.com/SethNikhill" },
+  { id: 0, handle: "twitter", url: "https://twitter.com/SethNikhill" },
   {
+    id: 1,
     handle: "github",
     url: "https://github.com/SNikhill",
   },
   {
+    id: 2,
     handle: "youtube",
     url: "https://www.youtube.com/SNikhill",
   },

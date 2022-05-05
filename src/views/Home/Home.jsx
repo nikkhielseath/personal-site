@@ -20,6 +20,7 @@ const HomePage = () => {
           <div className={"hero__actions"}>
             <CallToAction to={"/projects"}>projects</CallToAction>
             <CallToAction to={"/about"}>about</CallToAction>
+            <CallToAction to={"/blog"}>blog</CallToAction>
           </div>
         </div>
       </header>

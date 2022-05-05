@@ -1,12 +1,7 @@
 @import "variables/typography";
 @import "variables/colors";
 @import "variables/breakpoints";
-
-%prevent-overflow {
-  margin-top: 0;
-  word-break: break-word;
-  hyphens: auto;
-}
+@import "variables/partials";
 
 * {
   margin: 0;
@@ -57,6 +52,12 @@ body > * {
 p,
 li {
   @extend %prevent-overflow;
+}
+
+small {
+  @media only screen and (min-width: $desktopScreen) {
+    font-size: 1rem;
+  }
 }
 
 a.button {

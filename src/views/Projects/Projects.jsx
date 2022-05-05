@@ -8,7 +8,7 @@ const ProjectsPage = ({ projects }) => {
   return (
     <Page
       heroTitle="Projects"
-      heroPhrase={"Crafts that I was lucky to be a part of."}
+      heroPhrase={"Crafts that I was lucky to be a part of"}
       mainClassName={"project parallax"}
       heroClassName={"parallax__background"}
     >

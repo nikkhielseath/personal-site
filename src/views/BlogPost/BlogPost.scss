@@ -1,0 +1,37 @@
+@import "src/styles/variables/breakpoints";
+@import "src/styles/variables/colors";
+@import "src/styles/variables/partials";
+
+.blogPost {
+  @extend %reduce-desktop-heading-size;
+  overflow: hidden;
+
+  @media only screen and (min-width: $desktopScreen) {
+    padding: 0 25%;
+  }
+
+  padding: 0 3rem;
+  &__hero {
+    height: auto;
+    .hero__title {
+      text-align: left;
+      word-wrap: normal;
+      hyphens: none;
+    }
+
+    @media only screen and (max-width: $mobileScreen) {
+      min-height: 0;
+    }
+  }
+
+  &__meta {
+    color: dimgray;
+    text-align: center;
+  }
+
+  &__content {
+    p {
+      margin: 1rem 0;
+    }
+  }
+}
