@@ -18,7 +18,7 @@ export default BlogList;
 
 export const blogPostListQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       nodes {
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
