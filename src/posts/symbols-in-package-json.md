@@ -2,7 +2,7 @@
 slug: "/blog/symbols-in-package-json"
 date: "2022-06-06"
 title: "Symbols in package.json"
-subtitle: "What do ^ ~ < mean?"
+subtitle: "What do ^ ~ < in front a dependency version mean?"
 ---
 
 Recently, I came across a dependency error. Basically, a package being used by a

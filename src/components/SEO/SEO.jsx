@@ -27,7 +27,10 @@ const Seo = ({
       ))}
 
       {/* TWITTER DETAILS */}
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:card"
+        content={twitter.card || "summary_large_image"}
+      />
       <meta
         property="twitter:site"
         content={twitter.username || "@SethNikhill"}
@@ -58,6 +61,7 @@ Seo.propTypes = {
   author: PropTypes.string,
   canonicalURL: PropTypes.string,
   twitter: PropTypes.shape({
+    card: PropTypes.string,
     username: PropTypes.string,
     creator: PropTypes.string,
     title: PropTypes.string,
