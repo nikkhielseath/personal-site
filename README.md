@@ -45,6 +45,19 @@ Setup using `lint-staged`
 - `npm` as the preffered package manager
 - node v16.13.0
 
+## Environment Variables Setup
+
+This project does require `.env` file. This `.env` file will store:
+
+- API Key required for connecting to DatoCMS
+
+1. Create a `.env.development` file
+2. Paste the following into it
+   ```
+   DATO_CMS_READ_ONLY_API=READ_ONLY_API_KEY
+   ```
+3. Accquire a working Dato CMS ApiKey and set the same as environment variable's value.
+
 ## Start up the website locally
 
 - Use `npm run develop`
