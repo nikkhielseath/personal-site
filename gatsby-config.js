@@ -55,6 +55,12 @@ module.exports = {
             },
           },
           "gatsby-remark-images-anywhere",
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            },
+          },
         ],
       },
     },
