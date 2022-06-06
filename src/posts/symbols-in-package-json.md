@@ -16,7 +16,6 @@ project didn't have the correct version of a dependency listed as a peer.
 	}
 }
 
-
 {
 	// project that used the said package
 	"dependencies": {
