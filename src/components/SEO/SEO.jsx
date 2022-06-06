@@ -27,7 +27,10 @@ const Seo = ({
       ))}
 
       {/* TWITTER DETAILS */}
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:card"
+        content={twitter.card || "summary_large_image"}
+      />
       <meta
         property="twitter:site"
         content={twitter.username || "@SethNikhill"}
@@ -36,7 +39,7 @@ const Seo = ({
         name="twitter:creator"
         content={twitter.creator || "@SethNikhill"}
       />
-      <meta property="twitter:title" content={twitter.title} />
+      <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={twitter.image} />
 
@@ -44,7 +47,7 @@ const Seo = ({
       <meta property="og:site_name" content={openGraph.siteName} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={openGraph.url} />
-      <meta property="og:title" content={openGraph.title} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={openGraph.image} />
       <meta property="og:image:alt" content={openGraph.imageAlt} />
@@ -58,6 +61,7 @@ Seo.propTypes = {
   author: PropTypes.string,
   canonicalURL: PropTypes.string,
   twitter: PropTypes.shape({
+    card: PropTypes.string,
     username: PropTypes.string,
     creator: PropTypes.string,
     title: PropTypes.string,

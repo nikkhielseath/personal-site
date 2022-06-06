@@ -9,7 +9,12 @@ const BlogPost = ({ markdownRemark }) => {
   const { title, subtitle, canonicalURL, date } = frontmatter;
   return (
     <>
-      <SEO title={title} description={subtitle} canonicalURL={canonicalURL} />
+      <SEO
+        twitter={{ card: "player" }}
+        title={title}
+        description={subtitle}
+        canonicalURL={canonicalURL}
+      />
       <Page
         heroTitle={title}
         heroPhrase={""}

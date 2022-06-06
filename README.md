@@ -7,9 +7,60 @@ as CMS.
 The Design was made by me. Yes, it is not that impressive but, it is something, and I proud of the effort
 that I made. It actually helped me explore Adobe XD and Figma.
 
+This website also contains a [blog](https://snikhill.tech/blog) powered by markdown.
+
 # Future
 
-For now, I plan on making certain design changes, and I shall be also implementing a blog.
+- Improve the blog
+- Implement an action to automatically publish blog posts on dev.to & medium
+- Design Tweaks
+
+# Development Instructions
+
+This is a gatsbyjs website made using v4 of gatsby. Not all the gatsby plugins
+support this version but, it no criticial failures were observed.
+
+This project is using husky to run some pre-commit hooks.
+
+## Pre Commit Hooks stuff
+
+Setup using `lint-staged`
+
+```json
+  "lint-staged": {
+    "*.{jsx,js,scss,md}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  }
+```
+
+- Prettier is being used to beautify the code according to a consistent standard
+  before commiting.
+- eslint is being used to identify and warn about any critical JS syntax errors.
+
+## Requirements
+
+- `gatsby` @ v4
+- `npm` as the preffered package manager
+- node v16.13.0
+
+## Environment Variables Setup
+
+This project does require `.env` file. This `.env` file will store:
+
+- API Key required for connecting to DatoCMS
+
+1. Create a `.env.development` file
+2. Paste the following into it
+   ```
+   DATO_CMS_READ_ONLY_API=READ_ONLY_API_KEY
+   ```
+3. Accquire a working Dato CMS ApiKey and set the same as environment variable's value.
+
+## Start up the website locally
+
+- Use `npm run develop`
 
 # Social Links
 
