@@ -6,6 +6,8 @@ import SOCIAL_LINKS from "./socialLinks";
 const SITE_TITLE = "SNikhill - Human, Learner, Engineer";
 const PERSONAL_DESCRIPTION =
   "SNikhill is a Consistent Learner, Voracious Reader, Human, Software Engineer and much more.";
+const SEO_IMAGE_URL =
+  "https://www.datocms-assets.com/48735/1661583134-2022-08-27_12-22.png";
 
 const Seo = ({
   title,
@@ -85,15 +87,13 @@ Seo.defaultProps = {
     username: "@SethNikhill",
     creator: "@SethNikhill",
     title: SITE_TITLE,
-    image:
-      "https://www.datocms-assets.com/48735/1625302614-personalsiteimagenew.png",
+    image: SEO_IMAGE_URL,
   },
   openGraph: {
     siteName: SITE_TITLE,
     url: "https://snikhill.tech",
     title: SITE_TITLE,
-    image:
-      "https://www.datocms-assets.com/48735/1625302614-personalsiteimagenew.png",
+    image: SEO_IMAGE_URL,
     imageAlt: SITE_TITLE,
   },
 };
