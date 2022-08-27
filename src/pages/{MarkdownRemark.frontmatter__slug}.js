@@ -26,6 +26,7 @@ export const pageQuery = graphql`
         title
         subtitle
         canonicalURL
+        seoImage
       }
     }
   }
