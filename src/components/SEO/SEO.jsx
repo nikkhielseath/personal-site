@@ -44,7 +44,10 @@ const Seo = ({
       />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={seoImageURL || twitter.image} />
+      <meta
+        property="twitter:image"
+        content={seoImageURL || twitter.image || DEFAULT_SEO_IMAGE_URL}
+      />
 
       {/* OPEN GRAPHS */}
       <meta property="og:site_name" content={openGraph.siteName} />
@@ -52,7 +55,10 @@ const Seo = ({
       <meta property="og:url" content={openGraph.url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={seoImageURL || openGraph.image} />
+      <meta
+        property="og:image"
+        content={seoImageURL || openGraph.image || DEFAULT_SEO_IMAGE_URL}
+      />
       <meta property="og:image:alt" content={openGraph.imageAlt} />
     </Helmet>
   );
