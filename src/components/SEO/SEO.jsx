@@ -6,7 +6,7 @@ import SOCIAL_LINKS from "./socialLinks";
 const SITE_TITLE = "SNikhill - Human, Learner, Engineer";
 const PERSONAL_DESCRIPTION =
   "SNikhill is a Consistent Learner, Voracious Reader, Human, Software Engineer and much more.";
-const SEO_IMAGE_URL =
+const DEFAULT_SEO_IMAGE_URL =
   "https://www.datocms-assets.com/48735/1661583134-2022-08-27_12-22.png";
 
 const Seo = ({
@@ -16,6 +16,7 @@ const Seo = ({
   twitter,
   openGraph,
   canonicalURL,
+  seoImageURL,
 }) => {
   return (
     <Helmet>
@@ -43,7 +44,7 @@ const Seo = ({
       />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={twitter.image} />
+      <meta property="twitter:image" content={seoImageURL || twitter.image} />
 
       {/* OPEN GRAPHS */}
       <meta property="og:site_name" content={openGraph.siteName} />
@@ -51,7 +52,7 @@ const Seo = ({
       <meta property="og:url" content={openGraph.url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={openGraph.image} />
+      <meta property="og:image" content={seoImageURL || openGraph.image} />
       <meta property="og:image:alt" content={openGraph.imageAlt} />
     </Helmet>
   );
@@ -62,6 +63,7 @@ Seo.propTypes = {
   description: PropTypes.string,
   author: PropTypes.string,
   canonicalURL: PropTypes.string,
+  seoImageURL: PropTypes.string,
   twitter: PropTypes.shape({
     card: PropTypes.string,
     username: PropTypes.string,
@@ -83,17 +85,18 @@ Seo.defaultProps = {
   description: PERSONAL_DESCRIPTION,
   author: "SNikhill",
   canonicalURL: "",
+  seoImageURL: DEFAULT_SEO_IMAGE_URL,
   twitter: {
     username: "@SethNikhill",
     creator: "@SethNikhill",
     title: SITE_TITLE,
-    image: SEO_IMAGE_URL,
+    image: DEFAULT_SEO_IMAGE_URL,
   },
   openGraph: {
     siteName: SITE_TITLE,
     url: "https://snikhill.tech",
     title: SITE_TITLE,
-    image: SEO_IMAGE_URL,
+    image: DEFAULT_SEO_IMAGE_URL,
     imageAlt: SITE_TITLE,
   },
 };
