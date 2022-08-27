@@ -4,6 +4,7 @@ date: "2022-04-03"
 title: "Project level git config"
 subtitle: "Setup multiple git configs"
 canonicalURL: "https://dev.to/snikhill/project-level-git-config-5cam"
+seoImage: "https://www.datocms-assets.com/48735/1648228417-carbon.png"
 ---
 
 Last week, I completely shifted my system to Arch Linux and during this process, I lost some config(s), settings, etc.
