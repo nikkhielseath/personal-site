@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql } from "gatsby";
-import SEO from "../components/SEO/SEO";
 
 import BlogPost from "../views/BlogPost/BlogPost";
 
@@ -10,10 +9,6 @@ const Template = ({
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   return (
     <>
-      <SEO
-        title={markdownRemark.frontmatter.title}
-        description={markdownRemark.frontmatter.subtitle}
-      />
       <BlogPost markdownRemark={markdownRemark} />
     </>
   );
