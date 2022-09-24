@@ -6,7 +6,7 @@ import "./BlogPost.scss";
 
 const BlogPost = ({ markdownRemark }) => {
   const { frontmatter, html } = markdownRemark;
-  const { title, subtitle, canonicalURL, date } = frontmatter;
+  const { title, subtitle, canonicalURL, date, seoImage } = frontmatter;
   return (
     <>
       <SEO
@@ -14,6 +14,7 @@ const BlogPost = ({ markdownRemark }) => {
         title={title}
         description={subtitle}
         canonicalURL={canonicalURL}
+        seoImageURL={seoImage}
       />
       <Page
         heroTitle={title}
